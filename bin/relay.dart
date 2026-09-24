@@ -38,7 +38,7 @@ Future<void> _handle(HttpRequest request, String? requiredToken) async {
   final device = request.uri.queryParameters['device'] ?? '';
   if (token.length < 32 ||
       (requiredToken != null && token != requiredToken) ||
-      !RegExp(r'^[A-Za-z0-9_-]{20,32}$').hasMatch(device)) {
+      !RegExp(r'^[A-Za-z0-9_-]{20,32}={0,2}$').hasMatch(device)) {
     request.response.statusCode = HttpStatus.unauthorized;
     await request.response.close();
     return;

@@ -1,0 +1,7 @@
+name: private_folder_relay
+description: Opaque WebSocket router for Private Folder internet sync.
+publish_to: none
+version: 0.1.0
+environment:
+  sdk: ^3.12.1
+
